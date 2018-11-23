@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/layouts/pricing.css">
   <title>Tananyagok</title>
 </head>
 
@@ -58,37 +59,49 @@
   Szövegrész középre rendezése<input type="button" value="kód" onclick="textAlignCenter()" />
   <br>
   <br>
-  <a href="index.html">index</a>
 
   <script>
     function MDN() {
       var textMDN = "Tanulói portál HTML-hez, JavaScript-hez és CSS-hez";
       alert(textMDN);
     }
+
     function w3() {
       var textw3 =
         "A világ legnagyobb webfejlesztő oldala. Hasznos pl.: kódok gyakorlására és azonnali tesztelésére IDE nélküli környezetben";
       alert(textw3);
     }
+
     function slack() {
       var textslack =
         "Fájlmegosztás és kategórikus kommunikációs csatornák megnyitása. Ajánlott pl.: projekmunkákhoz";
       alert(textslack);
     }
+
     function bday() {
       var textbday = '<input type="date" name="bday">';
       alert(textbday);
     }
+
     function newTab() {
       var textnewTab =
         '<a target="tananyag.html" href="tananyag.html> "href" mellé a "target" parancsot is berakjuk';
       alert(textnewTab);
     }
+
     function textAlignCenter() {
       var textForTextAlignCenter = '<p style="text-align: center"> "Középre rendezett szöveg" </p>';
       alert(textForTextAlignCenter);
     }
   </script>
+  <div class="footer l-box">
+    <p>
+      Credits: Anita, Ruben, Kevin, Gábor
+    </p>
+    <p>
+      2018 Training360
+    </p>
+  </div>
 </body>
 
 </html>
