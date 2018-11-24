@@ -1,9 +1,10 @@
 function insert(num) {
-  document.form1.text1st.value = document.form1.text1st.value + num;
-}
-
-function insert2(num) {
-  document.form2.text2nd.value = document.form2.text2nd.value + num;
+  var operatorValueEmpty = document.querySelector('#operator').value === 'empty';
+  if (operatorValueEmpty === true) {
+    document.form1.text1st.value += num;
+  } else if (operatorValueEmpty === false) {
+    document.form1.text2nd.value += num;
+  }
 }
 
 function equal() {
@@ -12,7 +13,7 @@ function equal() {
   var operator = document.querySelector('#operator').value;
   var empty;
   document.form1.text1st.value = empty;
-  document.form2.text2nd.value = empty;
+  document.form1.text2nd.value = empty;
   var result;
 
   if (operator === '+') {
@@ -31,4 +32,6 @@ function equal() {
     result = Math.sqrt(number1st);
   }
   document.querySelector('#finalResult').innerHTML = result;
+  document.querySelector('#operator').value = 'empty';
 }
+
