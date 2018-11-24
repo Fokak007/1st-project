@@ -1,57 +1,115 @@
-var result = document.getElementById('disp1');
-var symbol = document.getElementById('symb');
-var fistNumberBox = document.getElementById('disp1');
+// var numbers = document.getElementById('disp1');
+// var symbol = document.getElementById('symb');
+// var fistNumberBox = document.getElementById('disp1');
 
-function nine() {
-  result.value += 9;
+// function nine() {
+//   numbers.value += 9;
+// }
+// function eight() {
+//   numbers.value += 8;
+// }
+// function seven() {
+//   numbers.value += 7;
+// }
+// function six() {
+//   numbers.value += 6;
+// }
+// function five() {
+//   numbers.value += 5;
+// }
+// function four() {
+//   numbers.value += 4;
+// }
+// function three() {
+//   numbers.value += 3;
+// }
+// function two() {
+//   numbers.value += 2;
+// }
+// function one() {
+//   numbers.value += 1;
+// }
+// function zero() {
+//   numbers.value += 0;
+// }
+// function point() {
+//   numbers.value += '.';
+// }
+// function clear() {
+//   numbers.value === 'empty';
+// }
+
+// function div() {
+//   symbol.value = '/';
+// }
+// function mul() {
+//   symbol.value = '*';
+// }
+// function sub() {
+//   symbol.value = '-';
+// }
+// function add() {
+//   symbol.value = '+';
+// }
+// function equal() {
+//   var number1 = String(document.getElementById('disp1').value);
+//   var operator = String(document.getElementById('symb').value);
+//   var number2 = String(document.getElementById('disp2').value);
+//   var eredmeny = number1 + operator + number2;
+//   document.getElementById('numbers').value = eval(eredmeny.value);
+// }
+var numbers = document.getElementById('ans');
+var result = document.getElementById('result');
+function cler() {
+  numbers.value = null;
+  result.value = null;
 }
-function eight() {
-  result.value += 8;
-}
-function seven() {
-  result.value += 7;
-}
-function six() {
-  result.value += 6;
-}
-function five() {
-  result.value += 5;
-}
-function four() {
-  result.value += 4;
-}
-function three() {
-  result.value += 3;
+
+function one() {
+  numbers.value += 1;
 }
 function two() {
-  result.value += 2;
+  numbers.value += 2;
 }
-function one() {
-  result.value += 1;
+function three() {
+  numbers.value += 3;
+}
+function four() {
+  numbers.value += 4;
+}
+function five() {
+  numbers.value += 5;
+}
+function six() {
+  numbers.value += 6;
+}
+function seven() {
+  numbers.value += 7;
+}
+function eight() {
+  numbers.value += 8;
+}
+function nine() {
+  numbers.value += 9;
 }
 function zero() {
-  result.value += 0;
-}
-function point() {
-  result.value += '.';
-}
-function clear() {
-  result.value === 'empty';
-}
-
-function div() {
-  symbol.value = '/';
-}
-function mul() {
-  symbol.value = '*';
+  numbers.value += 0;
 }
 function sub() {
-  symbol.value = '-';
+  numbers.value += '-';
 }
 function add() {
-  symbol.value = '+';
+  numbers.value += '+';
 }
-function eredmeny() {
-  var szam1 = parseFloat(document.getElementById('number1').value);
-  var szam2 = parseFloat(document.getElementById('number2').value);
+function mul() {
+  numbers.value += '*';
+}
+function divide() {
+  numbers.value += '/';
+}
+function point() {
+  numbers.value += '.';
+}
+function equal() {
+  result.value = eval(numbers.value);
 }
