@@ -20,18 +20,49 @@
     </div>
     <br>
     <br>
+    <ul>
+        <li><a href="#anitacalc">Anita számológépe</a>&nbsp;&nbsp;&nbsp;</li>
+        <br>
+        <li><a href="#rubencalculator">Ruben számológépe</a>&nbsp;&nbsp;&nbsp;</li>
+        <br>
+        <li><a href="#kevincalc">Kevin számológépe</a>&nbsp;&nbsp;&nbsp;</li>
+        <br>
+        <li><a href="#gaborcalc">Gábor számológépe</a>&nbsp;&nbsp;&nbsp;</li>
+    </ul>
+    <br>
+    <br>
+
     <div id="anitacalc">
-        <h2> Anita számológépe </h2>
-        <input type="number" id="num1" name="num1" placeholder="Első szám">
-        <select id="muvelet">
+        <h2 style="padding:10px; font-size: 1.5em">Anita számológépe</h2>
+        <input type="number" id="anitaNum1" placeholder="Szam1" name="Szam1" style="width:63px; height:30px; font-size:15px; margin:11px" />
+        <select id="anitaOperator">
+            <option value="default">Művelet</option>
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
             <option value="/">/</option>
+            <option value="%">%</option>
+            <option value="**">**</option>
         </select>
-        <input type="number" id="num2" name="num2" placeholder="Második szám">
-        <input type="button" onclick="calculate()" value="=">
-        <input id="eredmeny" type="number" readonly placeholder="Eredmény">
+        <input type="number" id="anitaNum2" name="Szam2" placeholder="Szam2" style="width:63px; height:30px; font-size:15px; margin:11px" />
+        <br />
+        <input type="button" value="1" onclick="anitaInsert(1)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="2" onclick="anitaInsert(2)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="3" onclick="anitaInsert(3)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <br />
+        <input type="button" value="4" onclick="anitaInsert(4)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="5" onclick="anitaInsert(5)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="6" onclick="anitaInsert(6)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <br />
+        <input type="button" value="7" onclick="anitaInsert(7)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="8" onclick="anitaInsert(8)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="9" onclick="anitaInsert(9)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <br />
+        <input type="button" value="0" onclick="anitaInsert(0)" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" value="." onclick="anitaInsert('.')" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <input type="button" onclick="anitaCalculate()" value="=" style="width:55px; height:30px; font-size:20px; margin:15px" />
+        <br />
+        <input id="anitaResult" type="number" readonly placeholder="Eredmény" style="width:230px; height:30px; font-size:15px; margin:15px" />
     </div>
     <br>
     <br>
@@ -76,32 +107,49 @@
     <div id="gaborcalc">
         <h2>Gábor számológépe </h2>
         <div>
-        <form name="gaborcalculator">
-        <input name="display" placeholder ="0" style="height:60px; text-align:right; font-size:25px; border-radius:8px; margin:3px">
-        <br>
-        <input type="button" value="7" onclick="document.gaborcalculator.display.value +='7'" style="width:60px; height:60px; font-size:30px; margin:5px"/>
-        <input type="button" value="8" onclick="document.gaborcalculator.display.value +='8'" style="width:60px; height:60px; font-size:30px; margin:5px"/>
-        <input type="button" value="9" onclick="document.gaborcalculator.display.value +='9'" style="width:60px; height:60px; font-size:30px; margin:5px"/>
-        <input type="button" value="÷" onclick="document.gaborcalculator.display.value += '/'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <br>
-        <input type="button" value="4" onclick="document.gaborcalculator.display.value +='4'" style="width:60px; height:60px; font-size:30px; margin:5px"/>
-        <input type="button" value="5" onclick="document.gaborcalculator.display.value +='5'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="6" onclick="document.gaborcalculator.display.value +='6'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="x" onclick="document.gaborcalculator.display.value += '*'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <br>
-        <input type="button" value="1" onclick="document.gaborcalculator.display.value +='1'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="2" onclick="document.gaborcalculator.display.value +='2'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="3" onclick="document.gaborcalculator.display.value +='3'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="-" onclick="document.gaborcalculator.display.value += '-'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <br>
-        <input type="button" value="0" onclick="document.gaborcalculator.display.value +='0'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="." onclick="document.gaborcalculator.display.value += '.'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="=" onclick="document.gaborcalculator.display.value = eval(document.gaborcalculator.display.value)" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <input type="button" value="+" onclick="document.gaborcalculator.display.value += '+'" style="width:60px; height:60px; font-size:30px; margin:5px">
-        <br>
-        <input type="button" value="clear" onclick="document.gaborcalculator.display.value = ''" style="width:284px; height:60px; font-size:30px; margin:5px">
-        <br>
-    </form>
+            <form name="gaborcalculator">
+                <input name="display" placeholder="0" style="height:60px; text-align:right; font-size:25px; border-radius:8px; margin:3px">
+                <br>
+                <input type="button" value="7" onclick="document.gaborcalculator.display.value +='7'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px" />
+                <input type="button" value="8" onclick="document.gaborcalculator.display.value +='8'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px" />
+                <input type="button" value="9" onclick="document.gaborcalculator.display.value +='9'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px" />
+                <input type="button" value="÷" onclick="document.gaborcalculator.display.value += '/'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <br>
+                <input type="button" value="4" onclick="document.gaborcalculator.display.value +='4'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px" />
+                <input type="button" value="5" onclick="document.gaborcalculator.display.value +='5'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="6" onclick="document.gaborcalculator.display.value +='6'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="x" onclick="document.gaborcalculator.display.value += '*'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <br>
+                <input type="button" value="1" onclick="document.gaborcalculator.display.value +='1'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="2" onclick="document.gaborcalculator.display.value +='2'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="3" onclick="document.gaborcalculator.display.value +='3'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="-" onclick="document.gaborcalculator.display.value += '-'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <br>
+                <input type="button" value="0" onclick="document.gaborcalculator.display.value +='0'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="." onclick="document.gaborcalculator.display.value += '.'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="=" onclick="document.gaborcalculator.display.value = eval(document.gaborcalculator.display.value)"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="+" onclick="document.gaborcalculator.display.value += '+'"
+                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <br>
+                <input type="button" value="clear" onclick="document.gaborcalculator.display.value = ''"
+                    style="width:284px; height:60px; font-size:30px; margin:5px">
+                <br>
+            </form>
         </div>
     </div>
     <script src="js/szamologepek.js"></script>
