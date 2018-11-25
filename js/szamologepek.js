@@ -35,19 +35,19 @@ function anitaCalculate() {
 }
 
 
-function összeadás() {
+function osszeadas() {
   document.szamol.result.value = document.szamol.first.value * 1 + document.szamol.second.value * 1;
 }
 
-function kivonás() {
+function kivonas() {
   document.szamol.result.value = document.szamol.first.value - document.szamol.second.value;
 }
 
-function szorzás() {
+function szorzas() {
   document.szamol.result.value = document.szamol.first.value * document.szamol.second.value;
 }
 
-function osztás() {
+function osztas() {
   document.szamol.result.value = document.szamol.first.value / document.szamol.second.value;
 }
 
