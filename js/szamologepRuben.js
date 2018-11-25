@@ -1,9 +1,9 @@
-function insert(num) {
+function insert(string) {
   var operatorValueEmpty = document.querySelector('#operator').value === 'empty';
   if (operatorValueEmpty === true) {
-    document.form1.text1st.value += num;
-  } else if (operatorValueEmpty === false) {
-    document.form1.text2nd.value += num;
+    document.form1.text1st.value += string;
+  } else {
+    document.form1.text2nd.value  += string;
   }
 }
 

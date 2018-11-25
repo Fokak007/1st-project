@@ -44,9 +44,9 @@
     <div class="main">
     <h1>Számológép</h1>
         <form name="form1" class="form1">
-            <input type="number" id="number1" placeholder="1st number" class="text1st" name="text1st" />
+            <input type="text" id="number1" placeholder="1st number" class="text1st" name="text1st" />
         <select id="operator" name="operator">
-            <option value="empty">Empty</option>
+            <option value="empty" selected>Empty</option>
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="x">*</option>
@@ -55,24 +55,24 @@
             <option value="^">^</option>
             <option value="sqrt">&radic;</option>
         </select>
-            <input type="number" id="number2" placeholder="2nd number" class="text2nd" name="text2nd" />
+            <input type="text" id="number2" placeholder="2nd number" class="text2nd" name="text2nd" />
         </form>
 
         <br />
-        <input type="button" class="button" value="0" onclick="insert(0)" id="zero" />
-        <input type="button" class="button" value="1" onclick="insert(1)" id="one" />
-        <input type="button" class="button" value="2" onclick="insert(2)" id="two" />
+        <input type="button" class="button" value="0" onclick="insert('0')" id="zero" />
+        <input type="button" class="button" value="1" onclick="insert('1')" id="one" />
+        <input type="button" class="button" value="2" onclick="insert('2')" id="two" />
         <br />
-        <input type="button" class="button" value="3" onclick="insert(3)" id="three" />
-        <input type="button" class="button" value="4" onclick="insert(4)" id="four" />
-        <input type="button" class="button" value="5" onclick="insert(5)" id="five" />
+        <input type="button" class="button" value="3" onclick="insert('3')" id="three" />
+        <input type="button" class="button" value="4" onclick="insert('4')" id="four" />
+        <input type="button" class="button" value="5" onclick="insert('5')" id="five" />
         <br />
-        <input type="button" class="button" value="6" onclick="insert(6)" id="six" />
-        <input type="button" class="button" value="7" onclick="insert(7)" id="seven" />
-        <input type="button" class="button" value="8" onclick="insert(8)" id="eight" />
+        <input type="button" class="button" value="6" onclick="insert('6')" id="six" />
+        <input type="button" class="button" value="7" onclick="insert('7')" id="seven" />
+        <input type="button" class="button" value="8" onclick="insert('8')" id="eight" />
         <br />
 
-        <input type="button" class="button" value="9" onclick="insert(9)" id="nine" />
+        <input type="button" class="button" value="9" onclick="insert('9')" id="nine" />
         <input type="button" class="button" value="." onclick="insert('.')" id="point" />
         <input type="button" class="button" value="=" onclick="equal()" /> <br />
     </div>
