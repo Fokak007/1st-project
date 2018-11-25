@@ -11,7 +11,7 @@ function equal() {
   var number1st = parseFloat(document.querySelector('#number1').value);
   var number2nd = parseFloat(document.querySelector('#number2').value);
   var operator = document.querySelector('#operator').value;
-  var empty;
+  var empty = '';
   document.form1.text1st.value = empty;
   document.form1.text2nd.value = empty;
   var result;
