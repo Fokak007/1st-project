@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="css/layouts/pricing.css">
+    <style>
+        .gform{border: 4px dotted rgb(119, 180, 196); margin:20px}
+        .gtr{text-align: center; margin-left: 100px}
+        .ktable{border: 4px solid black;}
+        .ktd, .ktr{text-align: center; border: 0px}
+    </style>
 </head>
 
 <body>
     <div class="pure-menu pure-menu-horizontal" style="background: white">
-        <a href="#" class="pure-menu-heading"><img src="favicon.ico" height="48"></a>
+        <a href="#" class="pure-menu-heading"><img src="favicon.ico" height="48" alt="favicon"></a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="./index.html" class="pure-menu-link">Főoldal</a></li>
             <li class="pure-menu-item"><a href="./csapat.html" class="pure-menu-link">Csapatunk</a></li>
@@ -26,13 +32,10 @@
     <h1 style="text-align:center">Számológépek</h1>
     <br>
     <br>
-    <ul>
+    <ul style="line-height:2em">
         <li><a href="#anitacalc">Anita számológépe</a>&nbsp;&nbsp;&nbsp;</li>
-        <br>
         <li><a href="#rubencalculator">Ruben számológépe</a>&nbsp;&nbsp;&nbsp;</li>
-        <br>
         <li><a href="#kevincalc">Kevin számológépe</a>&nbsp;&nbsp;&nbsp;</li>
-        <br>
         <li><a href="#gaborcalc">Gábor számológépe</a>&nbsp;&nbsp;&nbsp;</li>
     </ul>
     <br>
@@ -74,7 +77,7 @@
     <br>
     <div id="rubencalculator">
         <h2> Ruben számológépe </h2>
-        <iframe src="/szamologepRuben.html" frameborder="0" width="500px" height="560px"></iframe>
+        <iframe src="/szamologepRuben.html" width="500" height="560"></iframe>
         <!-- <a href="/szamologepRuben.html">Go to new version</a> -->
         <!-- <form name="szamol">
             Input 1st number:
@@ -98,10 +101,6 @@
     <br>
     <br>
     <div id="kevincalc">
-        <style>
-            .ktable{border: 4px solid black;}
-        .ktd, .ktr{text-align: center; border: 0px}
-        </style>
         <h2> Kevin számológépe</h2>
         <table class="ktable">
             <tr class="ktr">
@@ -109,7 +108,7 @@
                         10px;margin:2px"></td>
             </tr>
             <tr class="ktr">
-                <td colspan="3" width="50"> <input class="kinput" type="text" id="result" style="padding:
+                <td class="ktr" colspan="3"> <input class="kinput" type="text" id="result" style="padding:
                     10px;margin:2px"></td>
                 <td><input class="
                         kbutton" type="button" onclick="cler()" value="C" style="width: 90%; padding: 10px; margin: 2px"></td>
@@ -147,13 +146,9 @@
     <div id="gaborcalc">
         <h2> Gábor számológépe </h2>
         <div>
-        <style>
-                .gform{border: 4px dotted rgb(119, 180, 196); margin:20px}
-                .gtr{text-align: center; margin-left: 100px}
-            </style>
             
             <form name="gaborcalculator">
-                <table class="gform" stíí>
+                <table class="gform">
                 <tr class="gtr"><td>
                 <input name="display" placeholder="0" style="height:60px; text-align:right; font-size:25px; border-radius:8px; margin:3px">
                 <br>
