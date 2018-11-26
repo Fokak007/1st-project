@@ -106,7 +106,7 @@ p {
  * Choose a different color based on the type of pricing table.
  */
 .pricing-table-free .pricing-table-header {
-    background: #dadada;
+    background: #b1c4c5;
     padding: 10px;
     height: 20em;
 }
@@ -126,7 +126,7 @@ p {
     .pricing-table-header h2 {
         margin: 0;
         padding-top: 2em;
-        font-size: 1em;
+        font-size: 1.2em;
         font-weight: normal;
 
     }

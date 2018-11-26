@@ -146,3 +146,25 @@ function point() {
 function equal() {
   result.value = eval(numbers.value);
 }
+
+// Gábor calc
+
+function gaborCalc() {
+  document.gaborcalculator.display.value = Function('"use strict";return (' + document.gaborcalculator.display.value + ')')();
+}
+
+var mentettSzam = 0;
+
+function mentesMinusz() {
+  mentettSzam = 0;
+  document.gaborcalculator.display.value = "";
+}
+
+function mentesPlusz() {
+  mentettSzam = document.gaborcalculator.display.value;
+  document.gaborcalculator.display.value = "";
+}
+
+function mentesKiad() {
+  document.gaborcalculator.display.value += mentettSzam;
+}

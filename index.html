@@ -24,11 +24,6 @@
             <li class="pure-menu-item"><a href="./contact.html" class="pure-menu-link">Kapcsolat</a></li>
             <li class="pure-menu-item"><a href="./szamologepek.html" class="pure-menu-link">Számológépek</a></li>
         </ul>
-        <span id="demo" style="float:right"></span>
-        <script>
-            var d = new Date();
-            document.getElementById("demo").innerHTML = d;
-        </script>
     </nav>
     
     <h1 style="text-align: center">Főoldal</h1>
@@ -68,8 +63,12 @@
             kattintva
             megteheted.</p>
         <br>
-        <br>
-
+        <p>Az oldal betöltésekor a pontos idő:</p>
+        <p id="demo"> </p>
+        <script>
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d;
+            </script>
         <h1 style="text-align: center">
             <strong style="font-size:20px">Kellemes böngészést!</strong><br> <img src="./img/seal.gif"
                 alt="seal">

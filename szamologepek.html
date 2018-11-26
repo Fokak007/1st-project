@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Számológépek</title>
-    <script src="js/calculator.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="css/layouts/pricing.css">
@@ -75,8 +74,9 @@
     <br>
     <div id="rubencalculator">
         <h2> Ruben számológépe </h2>
-        <a href="/szamologepRuben.html">Go to new version</a>
-        <form name="szamol">
+        <iframe src="/szamologepRuben.html" frameborder="0" width="500px" height="560px"></iframe>
+        <!-- <a href="/szamologepRuben.html">Go to new version</a> -->
+        <!-- <form name="szamol">
             Input 1st number:
             <input name="first" id="first" placeholder="Első szám értéke">
             <br>
@@ -93,7 +93,7 @@
             <br>
             <br>
             Result <input name="result">
-        </form>
+        </form> -->
     </div>
     <br>
     <br>
@@ -102,7 +102,7 @@
             .ktable{border: 4px solid black;}
         .ktd, .ktr{text-align: center; border: 0px}
         </style>
-        <h2>Kevin számológépe</h2>
+        <h2> Kevin számológépe</h2>
         <table class="ktable">
             <tr class="ktr">
                 <td colspan="4" class="ktd"> <input type="text" id="ans" style="width: 88% ;padding:
@@ -145,34 +145,47 @@
     <br>
     <br>
     <div id="gaborcalc">
-        <h2>Gábor számológépe </h2>
+        <h2> Gábor számológépe </h2>
         <div>
+        <style>
+                .gform{border: 4px dotted rgb(119, 180, 196); margin:20px}
+                .gtr{text-align: center; margin-left: 100px}
+            </style>
+            
             <form name="gaborcalculator">
+                <table class="gform" stíí>
+                <tr class="gtr"><td>
                 <input name="display" placeholder="0" style="height:60px; text-align:right; font-size:25px; border-radius:8px; margin:3px">
                 <br>
                 <input type="button" value="7" onclick="document.gaborcalculator.display.value +='7'" style="width:60px; height:60px; font-size:30px; margin:5px" />
                 <input type="button" value="8" onclick="document.gaborcalculator.display.value +='8'" style="width:60px; height:60px; font-size:30px; margin:5px" />
                 <input type="button" value="9" onclick="document.gaborcalculator.display.value +='9'" style="width:60px; height:60px; font-size:30px; margin:5px" />
                 <input type="button" value="÷" onclick="document.gaborcalculator.display.value += '/'" style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="%" onclick="document.gaborcalculator.display.value += '%'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <br>
                 <input type="button" value="4" onclick="document.gaborcalculator.display.value +='4'" style="width:60px; height:60px; font-size:30px; margin:5px" />
                 <input type="button" value="5" onclick="document.gaborcalculator.display.value +='5'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="6" onclick="document.gaborcalculator.display.value +='6'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="x" onclick="document.gaborcalculator.display.value += '*'" style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="^" onclick="document.gaborcalculator.display.value += '**'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <br>
                 <input type="button" value="1" onclick="document.gaborcalculator.display.value +='1'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="2" onclick="document.gaborcalculator.display.value +='2'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="3" onclick="document.gaborcalculator.display.value +='3'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="-" onclick="document.gaborcalculator.display.value += '-'" style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="M-" onclick="mentesMinusz()" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <br>
                 <input type="button" value="0" onclick="document.gaborcalculator.display.value +='0'" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="." onclick="document.gaborcalculator.display.value += '.'" style="width:60px; height:60px; font-size:30px; margin:5px">
-                <input type="button" value="=" onclick="document.gaborcalculator.display.value = eval(document.gaborcalculator.display.value)"
-                    style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="=" onclick="gaborCalc()" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <input type="button" value="+" onclick="document.gaborcalculator.display.value += '+'" style="width:60px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="M+" onclick="mentesPlusz()" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <br>
                 <input type="button" value="clear" onclick="document.gaborcalculator.display.value = ''" style="width:284px; height:60px; font-size:30px; margin:5px">
+                <input type="button" value="MR" onclick="mentesKiad()" style="width:60px; height:60px; font-size:30px; margin:5px">
                 <br>
+            </td></tr>
+                </table>
             </form>
         </div>
     </div>
