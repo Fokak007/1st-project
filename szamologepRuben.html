@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ruben Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <link rel="stylesheet" href="css/layouts/pricing.css">
     <style>
 
@@ -42,13 +44,17 @@
 
 <body>
     <div class="main">
-    <h1>Számológép : Ruben</h1>
-    <div style="text-align:center">
-            <a href="./index.html">Főoldal</a> &nbsp;&nbsp;&nbsp;
-            <a href="./tananyag.html">Tananyag</a>&nbsp;&nbsp;&nbsp;
-            <a href="./contact.html">Kapcsolat</a>&nbsp;&nbsp;&nbsp;
-            <a href="./szamologepek.html">Számológépek</a>
-        </div>
+        <div class="pure-menu pure-menu-horizontal" style="background: white">
+                <a href="#" class="pure-menu-heading"><img src="favicon.ico" height="48"></a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="./index.html" class="pure-menu-link">Főoldal</a></li>
+                    <li class="pure-menu-item"><a href="./csapat.html" class="pure-menu-link">Csapatunk</a></li>
+                    <li class="pure-menu-item"><a href="./tananyag.html" class="pure-menu-link">Tananyag</a></li>
+                    <li class="pure-menu-item"><a href="./contact.html" class="pure-menu-link">Kapcsolat</a></li>
+                    <li class="pure-menu-item pure-menu-selected"><a href="./szamologepRuben.html" class="pure-menu-link">Számológép-Ruben</a></li>
+                </ul>
+            </div>
+            <h1>Számológép : Ruben</h1>
         <br>
         <form name="form1" class="form1">
             <input type="text" id="number1" placeholder="1st number" class="text1st" name="text1st" />
